@@ -3,8 +3,6 @@ const api= "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const search = document.querySelector(".search input")    //Searchbox
 const btn = document.querySelector(".search button")      //Search button
 const icon = document.querySelector(".icon")              //to change icons
-
-console.log(process.env);
 async function checkWeather(city){
     const response = await fetch(api + city + `&appid=${apiKey}`); 
     if(response.status == 404){                                               //if api doesnt return any data run the below code which is to show error message
