@@ -38,6 +38,10 @@ async function checkWeather(city){
     {
         icon.src = "images/mist.png";
     }
+    else if(data.weather[0].main=="Snow")
+    {
+        icon.src = "images/snow.png";
+    }
 
     document.querySelector(".result").style.display = "flex";
     document.querySelector(".details").style.display = "flex";
